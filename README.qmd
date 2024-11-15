@@ -1,0 +1,59 @@
+---
+title: "Leveraging Machine Learning in R for Predicting Outcomes: A Case Study"
+author: "Jagadish Katam"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Artificial Intelligence (AI), Machine Learning (ML), Deep Learning (DL), and Data Science (DS) have been frequently interchangeably used. ML is a subset of AI that focuses on developing algorithms and models that enable computers to learn from and make predictions or decisions based on data, without being explicitly programmed.
+
+## Data
+
+```{r}
+#| echo: false
+#| output: false
+#| eval: true
+#| include: false
+
+source('R/logisticmodel.R')
+logit <- logisticmodel('data/Liver_disease_data.csv')
+```
+
+```{r}
+#| echo: false
+head(logit$table)
+```
+
+```{r}
+logit$boxplot_figure
+```
+
+```{r}
+logit$barplot_figure
+```
+
+```{r}
+logit$model_summary
+```
+
+```{r}
+logit$accuracy
+```
+
+```{r}
+logit$confusion_matrix
+```
+
+```{r}
+logit$roc_curve
+```
+
+```{r}
+logit$roc_curve |> plot()
+```
+
+```{r}
+logit$predicted_probabilities
+```
