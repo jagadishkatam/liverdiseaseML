@@ -17,6 +17,8 @@ Artificial Intelligence (AI), Machine Learning (ML), Deep Learning (DL), and Dat
 #| eval: true
 #| include: false
 
+library(tidyverse)
+# devtools::load_all()
 source('R/logisticmodel.R')
 logit <- logisticmodel('data/Liver_disease_data.csv')
 ```
