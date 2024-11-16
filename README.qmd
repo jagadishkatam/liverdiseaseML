@@ -1,8 +1,10 @@
 ---
 title: "Leveraging Machine Learning in R for Predicting Outcomes: A Case Study"
 author: "Jagadish Katam"
-format: html
+format: pdf
 editor: visual
+execute: 
+  echo: false
 ---
 
 ## Introduction
@@ -28,25 +30,45 @@ logit <- logisticmodel('data/Liver_disease_data.csv')
 head(logit$table)
 ```
 
+{{< pagebreak >}}
+
+## Box Plot
+
 ```{r}
 logit$boxplot_figure
 ```
+
+## Bar Chart
 
 ```{r}
 logit$barplot_figure
 ```
 
+{{< pagebreak >}}
+
+## Model Summary
+
 ```{r}
 logit$model_summary
 ```
+
+{{< pagebreak >}}
+
+## Model Accuracy
 
 ```{r}
 logit$accuracy
 ```
 
+## Confusion Matrix
+
 ```{r}
 logit$confusion_matrix
 ```
+
+{{< pagebreak >}}
+
+## Receiver Operating Characteristic (ROC) 
 
 ```{r}
 logit$roc_curve
@@ -55,6 +77,10 @@ logit$roc_curve
 ```{r}
 logit$roc_curve |> plot()
 ```
+
+{{< pagebreak >}}
+
+## Predicted Probabilities
 
 ```{r}
 logit$predicted_probabilities
